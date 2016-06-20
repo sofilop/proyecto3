@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Geolocalizacion Sofia Lopez </title>
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" 
+rel="stylesheet" type="text/css" />
+<script type="text/javascript"
+src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript"
+src="js/routes.js"></script>
+
+</head>
+<body onload="initialize()" background=#99FFCC > 
+<div>
+<strong>Start:</strong>
+<select id="start" onchange="calcRoute();">
+ <!-- 	 
+<option value="Tampico,Tamaulipas, Mexico "> Tampico</option>
+<option value="Mexico City,Distrito Federal, Mexico"> Mexico City</option>
+<option value="Veracruz, vercruz-Llave, Mexico"> Veracruz</option>
+<option value="Veracruz, vercruz-Llave, Mexico,San Luis Potosí "> San Luis Potosi</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey "> Monterrey</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey,Salamanca">Salamanca</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey,Chihuahua">Chihuahua</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey,Campeche">Campeche</option>
+
+-->
+<option value="Tampico">Tampico</option> 
+<option value="Mexico City">Mexico</option>
+ <option value="Veracruz">Veracruz</option>
+ <option value="Campeche">Campeche</option>
+ <option value="Monterrey">Monterrey</option>
+ <option value="Oaxaca">Oaxaca</option>
+ <option value="San Luis Potosí">San Luis Potosi</option>
+ <option value="Salamanca">Salamnca</option>
+ 	
+</select> 
+<strong>End:</strong>
+<select id="end" onchange="calcRoute();">
+<!--  
+  <option value="Tampico, Tamaulipas, Mexico"   > Tampico</option>
+<option value="Mexico City, Distrito federal, Mexico"> Mexico City</option>
+<option value="Veracruz, vercruz-Llave, Mexico"> Veracruz</option>
+<option value="Veracruz, vercruz-Llave, Mexico,San Luis Potosí "> San Luis Potosi</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey "> Monterrey</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey,Salamanca">Salamanca</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey,Salamanca,Chihuahua">Chihuahua</option>
+<option value="Veracruz, vercruz-Llave, Mexico,Monterrey,Campeche">Campeche</option>
+-->
+   <option value="Tampico">Tampico</option> 
+<option value="Mexico City">Mexico</option>
+ <option value="Veracruz">Veracruz</option>
+ <option value="Campeche">Campeche</option>
+ <option value="Monterrey">Monterrey</option>
+ <option value="Oaxaca">Oaxaca</option>
+ <option value="San Luis Potosí">San Luis Potosi</option>
+<option value="Salamanca">Salamanca</option>
+
+</select>
+</div> 
+
+<h3 >Distance: <strong id="distance">0</strong> Km.  <br /> 
+ Month <strong id="meses">0</strong> <br />
+  Num_Robot <strong id="robot">0</strong>  <br />
+ 
+</h3>
+
+<table  border=2 >
+        <tr>
+ 	 		<td> <h4>Entry routes: </h4> </td>
+ 	 		<td><h4> Exit routes:  </h4></td>
+ 	 		<td><h4>   Robots:  </h4></td>
+ 	 		<td><h4> Total km :  </h4></td>
+ 	 		
+ 	 	</tr>
+
+
+ 	 	<tr>
+ 	 		<td> <h3><strong id="cbostar">0 </strong>  </h3></td>
+ 	 		<td><h3><strong id="endacum1">0  </strong></h3> </td>
+ 	 		<td> <h3><strong id=arrbot>0 </strong>  </h3> </td>
+ 	 		<td><h3><strong id="arrkm">0  </strong></h3>  </td>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	<td> </td>
+ 	 		<td><h4><strong >Total: </strong></h4> </td>
+ 	 		<td> <h5><strong id="totalr">0</strong><br /></h5> </td>
+ 	 		<td><h5><strong id="totaldis">0</strong> Km </h5>  </td>
+ 	 	</tr>
+ 	 	
+</table>
+
+ 
+
+
+
+
+ 
+<div id="map-canvas"></div>
+</body>
+</html>
